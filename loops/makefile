@@ -7,5 +7,10 @@ for.o : for.cpp
 	$(CPP) -c for.cpp
 
 
+while : while.o
+	$(CPP) -o while while.o
+
+while.o : while.cpp
+	$(CPP) -c while.cpp
 clean:
-	rm *.o for
+	rm *.o for while
