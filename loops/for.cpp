@@ -7,11 +7,10 @@ int main() {
 	 * A simple for loop with a range of 10.
 	 */
 
-	/***
+	
 	for(int i = 0; i <= 10; i++) {
 		std::cout << "Current number: " << i << '\n';
 	}
-	***/
 
 	/*
 	 * You can nest for loops,
