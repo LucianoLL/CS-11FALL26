@@ -1,4 +1,4 @@
-# Common Git Commands
+# Common Terminal Commands
 
 ## cd (Change Directory)
 Allows the user to change to another directory/folder via the terminal.
