@@ -15,6 +15,8 @@ void descFcn(int userNum) {
 }
 
 int main() {
+	// INPUT ###################################################################################################
+
 	/* The following lines will only print the first word/string */
 	std::string userStr;
 	std::cout << "Type a string of words : ";
@@ -30,7 +32,7 @@ int main() {
 	std::getline(std::cin, userLine);
 	std::cout << "The entire string : " << userLine << '\n';
 
-	// #########################################################################################################
+	// Loops ###################################################################################################
 	
 	/* Defining and Initializing a few variable */
 	int i = 0; // To define a variable is to wrtie a type followed by a variable name
@@ -55,7 +57,7 @@ int main() {
 		++i;
 	}
 
-	// #########################################################################################################
+	// Functions################################################################################################
 
 	/* Basic Function use */
 	basicFcn();
