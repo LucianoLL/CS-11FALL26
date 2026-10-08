@@ -15,6 +15,23 @@ void descFcn(int userNum) {
 }
 
 int main() {
+	/* The following lines will only print the first word/string */
+	std::string userStr;
+	std::cout << "Type a string of words : ";
+	std::cin >> userStr;
+
+	std::cout << "Your input is stored as : " << userStr << '\n';
+	
+	std::getline(std::cin, userStr); // Without this line, our getline what's left over in the stream
+
+	/* The follwoing will get the entire line of strings */
+	std::string userLine;
+	std::cout << "Type new text : ";
+	std::getline(std::cin, userLine);
+	std::cout << "The entire string : " << userLine << '\n';
+
+	// #########################################################################################################
+	
 	/* Defining and Initializing a few variable */
 	int i = 0; // To define a variable is to wrtie a type followed by a variable name
 	int len = 10; // To initialize is to give a defined variable an initial value ...
@@ -38,6 +55,8 @@ int main() {
 		++i;
 	}
 
+	// #########################################################################################################
+
 	/* Basic Function use */
 	basicFcn();
 	
@@ -49,6 +68,10 @@ int main() {
 	std::cout << "Type any numerical decimal digit : ";
 	std::cin >> arg1;
 	descFcn(arg1);
+
+	// #########################################################################################################
+	
+
 
 	exit(EXIT_SUCCESS);
 }
