@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 int main() {
 	// Loops ###################################################################################################
@@ -36,7 +37,7 @@ int main() {
 		std::cout << "Range For : " << tmp << '\n';
 	}
 
-	/* Using a while to get continuos user input */
+	/* Using a While-Loop to get continuous user input */
 	std::string whileInput;
 	std::string loopMsg = "Type any type of input : ";
 	std::cout << loopMsg;
@@ -46,6 +47,15 @@ int main() {
 		std::cout << loopMsg;
 	}
 
+	/* Using a While-Loop to iterate through an entire document */
+	std::ifstream sampleFile;
+	sampleFile.open("sample.txt");
+	std::string sampleLine;
+
+	while(std::getline(sampleFile, sampleLine)) {
+		std::cout << "sample.txt : " << sampleLine << '\n';
+	}
 
 	exit(EXIT_SUCCESS);
+
 }
