@@ -1,19 +1,17 @@
-CPP = g++
+CPP = g++ -std=c++23
 FLAGS = -Wextra -Wall -pedantic
 
-for : for.o
-	$(CPP) $(FLAGS) -o for for.o
+for : for.cpp
+	$(CPP) $(FLAGS) -o for for.cpp
 	./for
 
-for.o : for.cpp
-	$(CPP) -c for.cpp
-
-while : while.o
-	$(CPP) $(FLAGS) -o while while.o
+while : while.cpp
+	$(CPP) $(FLAGS) -o while while.cpp
 	./while
 
-while.o : while.cpp
-	$(CPP) -c while.cpp
+nested : nested.cpp
+	$(CPP) $(FLAGS) -o nested nested.cpp
+	./nested
 
 clean:
-	rm *.o for while
+	rm *.o for while nested
